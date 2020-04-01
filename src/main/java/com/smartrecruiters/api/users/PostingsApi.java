@@ -77,7 +77,7 @@ public class PostingsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/v1/companies/{companyIdentifier}/postings/{postingId}"
+        String localVarPath = "/api-v1/companies/{companyIdentifier}/postings/{postingId}"
             .replaceAll("\\{" + "companyIdentifier" + "\\}", localVarApiClient.escapeString(companyIdentifier.toString()))
             .replaceAll("\\{" + "postingId" + "\\}", localVarApiClient.escapeString(postingId.toString()));
 
