@@ -27,6 +27,7 @@ import com.smartrecruiters.api.posting.model.Department;
 import com.smartrecruiters.api.posting.model.ExperienceLevel;
 import com.smartrecruiters.api.posting.model.Function;
 import com.smartrecruiters.api.posting.model.Industry;
+import com.smartrecruiters.api.posting.model.Language;
 import com.smartrecruiters.api.posting.model.PostingLocation;
 import com.smartrecruiters.api.posting.model.TypeOfEmployment;
 import io.swagger.annotations.ApiModel;
@@ -39,7 +40,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * PostingItem
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-05-16T20:12:05.632124+01:00[Europe/London]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-05-16T20:25:18.743188+01:00[Europe/London]")
 public class PostingItem {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -108,6 +109,10 @@ public class PostingItem {
   public static final String SERIALIZED_NAME_CREATOR = "creator";
   @SerializedName(SERIALIZED_NAME_CREATOR)
   private Creator creator;
+
+  public static final String SERIALIZED_NAME_LANGUAGE = "language";
+  @SerializedName(SERIALIZED_NAME_LANGUAGE)
+  private Language language;
 
 
   public PostingItem id(String id) {
@@ -526,6 +531,30 @@ public class PostingItem {
   }
 
 
+  public PostingItem language(Language language) {
+    
+    this.language = language;
+    return this;
+  }
+
+   /**
+   * Get language
+   * @return language
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Language getLanguage() {
+    return language;
+  }
+
+
+
+  public void setLanguage(Language language) {
+    this.language = language;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -551,12 +580,13 @@ public class PostingItem {
         Objects.equals(this.experienceLevel, postingItem.experienceLevel) &&
         Objects.equals(this.customField, postingItem.customField) &&
         Objects.equals(this.ref, postingItem.ref) &&
-        Objects.equals(this.creator, postingItem.creator);
+        Objects.equals(this.creator, postingItem.creator) &&
+        Objects.equals(this.language, postingItem.language);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, uuid, name, applyUrl, postingUrl, refNumber, company, releaseDate, location, industry, department, function, typeOfEmployment, experienceLevel, customField, ref, creator);
+    return Objects.hash(id, uuid, name, applyUrl, postingUrl, refNumber, company, releaseDate, location, industry, department, function, typeOfEmployment, experienceLevel, customField, ref, creator, language);
   }
 
 
@@ -581,6 +611,7 @@ public class PostingItem {
     sb.append("    customField: ").append(toIndentedString(customField)).append("\n");
     sb.append("    ref: ").append(toIndentedString(ref)).append("\n");
     sb.append("    creator: ").append(toIndentedString(creator)).append("\n");
+    sb.append("    language: ").append(toIndentedString(language)).append("\n");
     sb.append("}");
     return sb.toString();
   }
