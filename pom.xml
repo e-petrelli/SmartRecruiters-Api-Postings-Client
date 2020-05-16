@@ -5,7 +5,7 @@
     <artifactId>smartrecruiters-api-postings-client</artifactId>
     <packaging>jar</packaging>
     <name>SmartRecruiters API Postings Client</name>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>SmartRecruiters Postings API Client</description>
 

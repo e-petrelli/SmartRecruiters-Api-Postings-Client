@@ -27,7 +27,7 @@ import com.smartrecruiters.api.posting.model.Department;
 import com.smartrecruiters.api.posting.model.ExperienceLevel;
 import com.smartrecruiters.api.posting.model.Function;
 import com.smartrecruiters.api.posting.model.Industry;
-import com.smartrecruiters.api.posting.model.JobAdSections;
+import com.smartrecruiters.api.posting.model.JobAd;
 import com.smartrecruiters.api.posting.model.Language;
 import com.smartrecruiters.api.posting.model.PostingLocation;
 import com.smartrecruiters.api.posting.model.TypeOfEmployment;
@@ -41,7 +41,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * Posting
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-05-16T20:25:18.743188+01:00[Europe/London]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-05-16T21:38:45.050245+01:00[Europe/London]")
 public class Posting {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -113,7 +113,7 @@ public class Posting {
 
   public static final String SERIALIZED_NAME_JOB_AD = "jobAd";
   @SerializedName(SERIALIZED_NAME_JOB_AD)
-  private JobAdSections jobAd;
+  private JobAd jobAd;
 
   public static final String SERIALIZED_NAME_LANGUAGE = "language";
   @SerializedName(SERIALIZED_NAME_LANGUAGE)
@@ -536,7 +536,7 @@ public class Posting {
   }
 
 
-  public Posting jobAd(JobAdSections jobAd) {
+  public Posting jobAd(JobAd jobAd) {
     
     this.jobAd = jobAd;
     return this;
@@ -549,13 +549,13 @@ public class Posting {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public JobAdSections getJobAd() {
+  public JobAd getJobAd() {
     return jobAd;
   }
 
 
 
-  public void setJobAd(JobAdSections jobAd) {
+  public void setJobAd(JobAd jobAd) {
     this.jobAd = jobAd;
   }
 

@@ -20,41 +20,42 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.smartrecruiters.api.posting.model.JobAdSections;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * TypeOfEmployment
+ * JobAd
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-05-16T21:38:45.050245+01:00[Europe/London]")
-public class TypeOfEmployment {
-  public static final String SERIALIZED_NAME_LABEL = "label";
-  @SerializedName(SERIALIZED_NAME_LABEL)
-  private String label;
+public class JobAd {
+  public static final String SERIALIZED_NAME_SECTIONS = "sections";
+  @SerializedName(SERIALIZED_NAME_SECTIONS)
+  private JobAdSections sections;
 
 
-  public TypeOfEmployment label(String label) {
+  public JobAd sections(JobAdSections sections) {
     
-    this.label = label;
+    this.sections = sections;
     return this;
   }
 
    /**
-   * Get label
-   * @return label
+   * Get sections
+   * @return sections
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getLabel() {
-    return label;
+  public JobAdSections getSections() {
+    return sections;
   }
 
 
 
-  public void setLabel(String label) {
-    this.label = label;
+  public void setSections(JobAdSections sections) {
+    this.sections = sections;
   }
 
 
@@ -66,21 +67,21 @@ public class TypeOfEmployment {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TypeOfEmployment typeOfEmployment = (TypeOfEmployment) o;
-    return Objects.equals(this.label, typeOfEmployment.label);
+    JobAd jobAd = (JobAd) o;
+    return Objects.equals(this.sections, jobAd.sections);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(label);
+    return Objects.hash(sections);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TypeOfEmployment {\n");
-    sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("class JobAd {\n");
+    sb.append("    sections: ").append(toIndentedString(sections)).append("\n");
     sb.append("}");
     return sb.toString();
   }
