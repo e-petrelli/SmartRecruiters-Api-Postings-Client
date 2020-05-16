@@ -25,44 +25,48 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Function
+ * Language
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-05-16T20:12:05.632124+01:00[Europe/London]")
-public class Function {
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
+public class Language {
+  public static final String SERIALIZED_NAME_CODE = "code";
+  @SerializedName(SERIALIZED_NAME_CODE)
+  private String code;
 
   public static final String SERIALIZED_NAME_LABEL = "label";
   @SerializedName(SERIALIZED_NAME_LABEL)
   private String label;
 
+  public static final String SERIALIZED_NAME_LABEL_NATIVE = "labelNative";
+  @SerializedName(SERIALIZED_NAME_LABEL_NATIVE)
+  private String labelNative;
 
-  public Function id(String id) {
+
+  public Language code(String code) {
     
-    this.id = id;
+    this.code = code;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get code
+   * @return code
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getId() {
-    return id;
+  public String getCode() {
+    return code;
   }
 
 
 
-  public void setId(String id) {
-    this.id = id;
+  public void setCode(String code) {
+    this.code = code;
   }
 
 
-  public Function label(String label) {
+  public Language label(String label) {
     
     this.label = label;
     return this;
@@ -86,6 +90,30 @@ public class Function {
   }
 
 
+  public Language labelNative(String labelNative) {
+    
+    this.labelNative = labelNative;
+    return this;
+  }
+
+   /**
+   * Get labelNative
+   * @return labelNative
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getLabelNative() {
+    return labelNative;
+  }
+
+
+
+  public void setLabelNative(String labelNative) {
+    this.labelNative = labelNative;
+  }
+
+
   @Override
   public boolean equals(java.lang.Object o) {
     if (this == o) {
@@ -94,23 +122,25 @@ public class Function {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Function function = (Function) o;
-    return Objects.equals(this.id, function.id) &&
-        Objects.equals(this.label, function.label);
+    Language language = (Language) o;
+    return Objects.equals(this.code, language.code) &&
+        Objects.equals(this.label, language.label) &&
+        Objects.equals(this.labelNative, language.labelNative);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, label);
+    return Objects.hash(code, label, labelNative);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Function {\n");
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("class Language {\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("    label: ").append(toIndentedString(label)).append("\n");
+    sb.append("    labelNative: ").append(toIndentedString(labelNative)).append("\n");
     sb.append("}");
     return sb.toString();
   }

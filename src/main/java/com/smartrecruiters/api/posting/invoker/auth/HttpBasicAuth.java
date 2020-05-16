@@ -14,10 +14,13 @@
 package com.smartrecruiters.api.posting.invoker.auth;
 
 import com.smartrecruiters.api.posting.invoker.Pair;
+
 import okhttp3.Credentials;
 
-import java.util.List;
 import java.util.Map;
+import java.util.List;
+
+import java.io.UnsupportedEncodingException;
 
 public class HttpBasicAuth implements Authentication {
     private String username;

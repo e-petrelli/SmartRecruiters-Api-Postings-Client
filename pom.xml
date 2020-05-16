@@ -5,7 +5,7 @@
     <artifactId>smartrecruiters-api-postings-client</artifactId>
     <packaging>jar</packaging>
     <name>SmartRecruiters API Postings Client</name>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <url>https://github.com/openapitools/openapi-generator</url>
     <description>SmartRecruiters Postings API Client</description>
 
@@ -123,14 +123,5 @@
         <junit-version>4.12</junit-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub e-petrelli Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/e-petrelli/smartrecruiters-api-postings-client</url>
-        </repository>
-    </distributionManagement>
-
 </project>
 

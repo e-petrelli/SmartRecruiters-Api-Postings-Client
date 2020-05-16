@@ -13,8 +13,20 @@
 
 package com.smartrecruiters.api.posting;
 
+import com.smartrecruiters.api.posting.invoker.ApiCallback;
+import com.smartrecruiters.api.posting.invoker.ApiClient;
+import com.smartrecruiters.api.posting.invoker.ApiException;
+import com.smartrecruiters.api.posting.invoker.ApiResponse;
+import com.smartrecruiters.api.posting.invoker.Configuration;
+import com.smartrecruiters.api.posting.invoker.Pair;
+import com.smartrecruiters.api.posting.invoker.ProgressRequestBody;
+import com.smartrecruiters.api.posting.invoker.ProgressResponseBody;
+
 import com.google.gson.reflect.TypeToken;
-import com.smartrecruiters.api.posting.invoker.*;
+
+import java.io.IOException;
+
+
 import com.smartrecruiters.api.posting.model.Departments;
 import com.smartrecruiters.api.posting.model.JobAdLanguageCode;
 import com.smartrecruiters.api.posting.model.Posting;
@@ -65,7 +77,7 @@ public class PostingsApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/api-v1/companies/{companyIdentifier}/postings/{postingId}"
+        String localVarPath = "/v1/companies/{companyIdentifier}/postings/{postingId}"
             .replaceAll("\\{" + "companyIdentifier" + "\\}", localVarApiClient.escapeString(companyIdentifier.toString()))
             .replaceAll("\\{" + "postingId" + "\\}", localVarApiClient.escapeString(postingId.toString()));
 

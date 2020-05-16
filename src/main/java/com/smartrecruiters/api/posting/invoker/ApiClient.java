@@ -13,9 +13,6 @@
 
 package com.smartrecruiters.api.posting.invoker;
 
-import com.smartrecruiters.api.posting.invoker.auth.ApiKeyAuth;
-import com.smartrecruiters.api.posting.invoker.auth.Authentication;
-import com.smartrecruiters.api.posting.invoker.auth.HttpBasicAuth;
 import okhttp3.*;
 import okhttp3.internal.http.HttpMethod;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -47,6 +44,11 @@ import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.smartrecruiters.api.posting.invoker.auth.Authentication;
+import com.smartrecruiters.api.posting.invoker.auth.HttpBasicAuth;
+import com.smartrecruiters.api.posting.invoker.auth.HttpBearerAuth;
+import com.smartrecruiters.api.posting.invoker.auth.ApiKeyAuth;
 
 public class ApiClient {
 
@@ -1216,16 +1218,16 @@ public class ApiClient {
                 trustManagers = new TrustManager[]{
                         new X509TrustManager() {
                             @Override
-                            public void checkClientTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                            public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
                             }
 
                             @Override
-                            public void checkServerTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+                            public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
                             }
 
                             @Override
-                            public X509Certificate[] getAcceptedIssuers() {
-                                return new X509Certificate[]{};
+                            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                                return new java.security.cert.X509Certificate[]{};
                             }
                         }
                 };

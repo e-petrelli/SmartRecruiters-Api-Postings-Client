@@ -15,8 +15,8 @@ package com.smartrecruiters.api.posting.invoker.auth;
 
 import com.smartrecruiters.api.posting.invoker.Pair;
 
-import java.util.List;
 import java.util.Map;
+import java.util.List;
 
 public interface Authentication {
     /**
